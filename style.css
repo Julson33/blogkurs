@@ -1,0 +1,125 @@
+
+/*kod nawigacji*/
+nav{
+    width: 100%; /*szerokość*/
+    height: 60px; /*wysokość*/
+    background-color: #473d8b77; /*kolor tła*/
+    color: white; /*kolor czcionki*/
+    font-weight: 600; /*grubość czcionki*/
+    backdrop-filter: saturate(180%) blur(20px); /* filtr w ym przypadku rozmycie tła*/
+    position: sticky; /*przykleja element*/
+    top: 0; /*pozycja na stronie*/
+
+
+
+}
+a{
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+.wrap{
+    max-width: 1000px; /*maxymalna szerokość (elementu*/
+    margin: 0 auto;
+    display: flex; /*ustawia elemnty obok siebie*/
+    justify-content: space-between; /*roztawienie elementów poziomo*/
+    line-height: 60px;
+}
+
+.itemwrap{
+    display: flex;
+    }
+    @media(max-width: 500px){
+      .itemwrap {
+        display: none;
+      } 
+    }
+.item{
+    padding: 0 30px; /*pierwsz cyferka(0) margines góra-dół, druga cyferka (30px) margines prawo-lewo*/
+    line-height: 60px;
+}
+.logo{
+    line-height:  60px;
+    font-weight: 800;
+}
+/*kod ogólny*/
+body{
+    margin: 0; /*margines zewnętrzny*/
+    padding: 0%; /*margines wewnętrzny*/
+}
+ /* gwiazdka służy do typu czcionki we wszystkich tekstach */
+*{
+    font-family: 'Source Sans Pro', sans-serif; /*czcionka pobrana z google fonts, najpierw dajemy linka do head w html*/
+}
+
+/*Mordo to jest zbyt trudne*/
+/*głowny obraze*/
+
+header{
+    width: 100%; /*szerokość elementu header*/
+    height: 550px;
+    background-image: url('słoneczny\ dzień.jpg'); /*wstawienie obrazka*/
+    background-repeat: no-repeat; /*usuwa powtarzanie*/
+    background-position:  center; /*pozycja zdjęcia*/
+    margin-top: -60px; /* margines top*/
+
+}
+/*blog*/
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.postlist{
+    display: grid;/*wyświetla w siatce*/
+    grid-template-columns: repeat(3,1fr); /*defincja kolumny*/
+    grid-gap: 24px;
+
+}
+@media( max-width: 500px){
+    .postlist{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media( max-width: 700px) and (min-width:500px) {
+    .postlist{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*styluje coś w czymś - steruje wszystkimi img(w tym przyoadku) które znajdują sie w article*/
+article>img{
+    width: 100%;
+    object-fit: cover;
+    height: 170px;
+}
+article{
+    box-shadow: 0 10px  15px -3px #0000001a
+
+}
+.tekst>.category{
+    color: turquoise;
+
+}
+.tekst>h3{
+    color: #222;
+    font-size:  20px;
+    text-align: center;
+}
+.authortext>p{
+    color: black;
+    margin: 0;
+
+}
+.author{
+    display: flex;
+}
+.author>img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.tekst{
+    padding: 0 24px 24px 24px;
+}
+main>h2{
+    text-align: center;
+}
