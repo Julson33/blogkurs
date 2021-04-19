@@ -49,6 +49,7 @@ body{
  /* gwiazdka służy do typu czcionki we wszystkich tekstach */
 *{
     font-family: 'Source Sans Pro', sans-serif; /*czcionka pobrana z google fonts, najpierw dajemy linka do head w html*/
+    box-sizing: border-box;
 }
 
 /*Mordo to jest zbyt trudne*/
@@ -123,3 +124,129 @@ article{
 main>h2{
     text-align: center;
 }
+/*Sekcja Kontaktowa*/
+section{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /*przeniesienie do następnej linijki*/
+    
+}
+section>h2{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+section>img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-right: 16px;
+    box-shadow: 0 10px 15px -3px #0000009a;
+}
+@media(max-width:600px){
+    section>img{
+     margin: 0 auto 50px;
+     
+    }
+}
+section>form{
+    width: calc(100% - 216px);
+    
+}
+@media(max-width: 600px){
+    section>form{
+        width: 100%;
+        }
+}
+
+form>input,form>textarea{
+    width: 100%;
+    border: none;
+    box-shadow: 0 10px 15px -3px #0000001a;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+form>input[type=submit]{
+    width: 25%;
+    background-color: #2563eb;
+    font-weight: 600;
+    color: snow;
+    cursor: pointer;
+}
+@media(max-width:600px){
+    form>input[type=submit]{
+        width: 100%;
+    }
+}
+
+/*stopka*/
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+}
+/* artykuł */
+.artykol{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.artykol>img{
+    width: 100%;
+    object-fit: cover;
+}
+.artykol>.data{
+    text-align: center;
+}
+.artykol>h1{
+    text-align: center;
+}
+.artykol>p{
+    text-align: center;
+}
+
+/* artykuł 2 */
+.artykul{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.artykul>img{
+    width: 100%;
+    object-fit: cover; 
+}
+.artykul>.data{
+    text-align: center;
+}
+.artykul>h1{
+    text-align: center;
+}
+.artykul>p{
+    text-align: center;
+}
+
+/* artykuł 3 */
+.artyle{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.artyle>img{
+    width: 100%;
+    object-fit: cover; 
+}
+.artyle>.data{
+    text-align: center;
+}
+.artyle>h1{
+    text-align: center;
+}
+.artyle>p{
+    text-align: center;
+}
+
